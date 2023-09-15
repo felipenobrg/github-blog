@@ -1,7 +1,9 @@
+import { Header } from "../../components/header";
+
 export function Home() {
     return (
         <>
-         <h1>oi</h1>
+         <Header />
         </>
     )
 }
