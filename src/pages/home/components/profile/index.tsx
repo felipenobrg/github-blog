@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { ImageContainer, ProfileAbout, ProfileContainer, ProfileContent, ProfileText } from "./styles";
-import { GithubLogo, Users } from "phosphor-react";
+import { ImageContainer, ProfileAbout, ProfileContainer, ProfileContent, ProfileText, UrlContainer } from "./styles";
+import { ArrowSquareOut, GithubLogo, Users } from "phosphor-react";
 
 interface ProfileProps {
   avatar_url: string;
@@ -9,6 +9,7 @@ interface ProfileProps {
   bio: string;
   login: string;
   followers: string;
+  html_url: string;
 }
 
 export function Profile() { 
@@ -18,6 +19,7 @@ export function Profile() {
   bio: "",
   login: "",
   followers: "",
+  html_url: "",
 });
 
   useEffect(() => {
@@ -49,6 +51,10 @@ export function Profile() {
         <p><Users />{profileData.followers} seguidores</p>
         </ProfileAbout>
         </ProfileText>
+
+        <UrlContainer>
+          <a href={profileData.html_url}>GITHUB <ArrowSquareOut size={20} /></a>
+        </UrlContainer>
       </ProfileContent>
     </ProfileContainer>
   );

@@ -48,3 +48,15 @@ export const ProfileAbout = styled.div`
     gap: 2px;
   }
 `
+
+export const UrlContainer = styled.div`
+  a {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: ${(props) => props.theme["blue"]};
+    text-decoration: none;
+    margin-top: 1.2rem;
+    margin-left: 7rem;
+  }
+`
