@@ -29,7 +29,6 @@ export function Profile() {
           "https://api.github.com/users/felipenobrg"
         );
         setProfileData(response.data);
-        console.log(profileData);
       } catch (error) {
         console.error(error);
       }

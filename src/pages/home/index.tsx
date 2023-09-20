@@ -1,14 +1,15 @@
 import { Header } from "../../components/header";
 import { Profile } from "./components/profile";
-import { Publications } from "./components/publications";
-
+import { PublicationCard } from "./components/publicationCard";
+import { PublicationInput } from "./components/publicationInput";
 
 export function Home() {
     return (
         <>
          <Header />
          <Profile />
-         <Publications />
+         <PublicationInput />
+         <PublicationCard />
         </>
     )
 }

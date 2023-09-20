@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PublicationContainer = styled.div`
+export const PublicationInputContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
