@@ -20,5 +20,7 @@ export const PublicationInputContainer = styled.div`
     &::placeholder {
       color: ${(props) => props.theme["base-label"]};
     }
+
+    
   }
 `;

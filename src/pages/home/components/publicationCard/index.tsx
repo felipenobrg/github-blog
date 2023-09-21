@@ -6,7 +6,7 @@ interface PublicationItem {
   id: number;
   title: string;
   body: string;
-  created_at: string; // Make sure this matches the data structure
+  created_at: string; 
 }
 
 export function PublicationCard() {
