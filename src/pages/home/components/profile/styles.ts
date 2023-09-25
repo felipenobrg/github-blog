@@ -13,7 +13,6 @@ export const ProfileContainer = styled.section`
   @media screen and (max-width: 768px) {
     height: 25rem;
   }
-
 `;
 
 export const ProfileContent = styled.div`
@@ -34,6 +33,12 @@ export const ImageContainer = styled.div`
     width: 9.25rem;
     border-radius: 9999px;
   }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ProfileText = styled.div`
@@ -49,6 +54,18 @@ export const ProfileText = styled.div`
   p {
     color: ${(props) => props.theme["base-text"]};
   }
+
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
+
+    h1 {
+      margin-top: 1rem;
+    }
+  
+    p {
+      width: 80%;
+    }
+  }
 `;
 
 export const ProfileAbout = styled.div`
@@ -60,6 +77,12 @@ export const ProfileAbout = styled.div`
     align-items: center;
     gap: 2px;
   }
+
+  
+  @media screen and (max-width: 768px) {
+   width: 60%;
+  }
+  
 `
 
 export const UrlContainer = styled.div`
