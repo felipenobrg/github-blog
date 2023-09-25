@@ -72,7 +72,7 @@ export const ProfileAbout = styled.div`
   p {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 3px;
   }
 
   @media screen and (max-width: 768px) {
@@ -85,7 +85,7 @@ export const UrlContainer = styled.div`
   a {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 3px;
     color: ${(props) => props.theme["blue"]};
     text-decoration: none;
     margin-top: 1.2rem;

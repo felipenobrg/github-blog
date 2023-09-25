@@ -8,7 +8,11 @@ import {
   ProfileText,
   UrlContainer,
 } from "./styles";
-import { ArrowSquareOut, GithubLogo, Users } from "phosphor-react";
+import { ArrowSquareOut, Users } from "phosphor-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 interface ProfileProps {
   avatar_url: string;
@@ -54,10 +58,10 @@ export function Profile() {
           <p>{profileData.bio}</p>
           <ProfileAbout>
             <p>
-              <GithubLogo /> {profileData.login}
+            <FontAwesomeIcon icon={faGithub} /> {profileData.login}
             </p>
             <p>
-              <Users />
+            <FontAwesomeIcon icon={faUser} />
               {profileData.followers} seguidores
             </p>
           </ProfileAbout>
@@ -65,7 +69,7 @@ export function Profile() {
 
         <UrlContainer>
           <a href={profileData.html_url}>
-            GITHUB <ArrowSquareOut size={20} weight="fill" />
+            GITHUB <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </UrlContainer>
       </ProfileContent>
