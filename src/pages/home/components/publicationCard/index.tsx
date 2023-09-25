@@ -1,16 +1,28 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { CenteredPublicationCardContainer, PublicationCardContainer, PublicationCardContent } from "./styles";
+import {
+  CenteredPublicationCardContainer,
+  PublicationCardContainer,
+  PublicationCardContent,
+  PublicationInputContainer,
+} from "./styles";
 
 interface PublicationItem {
   id: number;
   title: string;
   body: string;
-  created_at: string; 
+  created_at: string;
 }
 
 export function PublicationCard() {
-  const [publicationData, setPublicationsData] = useState<PublicationItem[]>([]);
+  const [publicationData, setPublicationsData] = useState<PublicationItem[]>(
+    []
+  );
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const filteredPublicationData = publicationData.filter((item) =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   useEffect(() => {
     async function getPublicationsData() {
@@ -28,16 +40,16 @@ export function PublicationCard() {
     getPublicationsData();
   }, []);
 
-  console.log(publicationData)
+  console.log(publicationData);
 
   const calculateTimeAgo = (dateString: string) => {
     const currentDate = new Date();
     const createdAtDate = new Date(dateString);
-  
+
     const monthsAgo =
       (currentDate.getFullYear() - createdAtDate.getFullYear()) * 12 +
       (currentDate.getMonth() - createdAtDate.getMonth());
-  
+
     if (monthsAgo === 0) {
       const daysAgo = Math.floor(
         (currentDate.getTime() - createdAtDate.getTime()) /
@@ -45,36 +57,47 @@ export function PublicationCard() {
       );
       return `${daysAgo} dias`;
     }
-  
+
     return `${monthsAgo} meses`;
   };
-  
+
   const truncateText = (text: string, maxLength: number) => {
     if (text.length > maxLength) {
       return text.substring(0, maxLength) + "...";
     }
   };
 
-
   return (
-    <CenteredPublicationCardContainer>
-    <PublicationCardContainer>
-      {publicationData.length > 0 ? (
-        publicationData.map((item) => (
-          <div key={item.id}>
-            <PublicationCardContent>
-              <div className="name-time">
-              <h1>{item.title}</h1>
-              <p>{calculateTimeAgo(item.created_at)}</p>
+    <>
+      <PublicationInputContainer>
+        <form>
+          <input
+            type="text"
+            placeholder="Buscar conteúdo"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </form>
+      </PublicationInputContainer>
+      <CenteredPublicationCardContainer>
+        <PublicationCardContainer>
+          {filteredPublicationData.length > 0 ? (
+            filteredPublicationData.map((item) => (
+              <div key={item.id}>
+                <PublicationCardContent>
+                  <div className="name-time">
+                    <h1>{item.title}</h1>
+                    <p>{calculateTimeAgo(item.created_at)}</p>
+                  </div>
+                  <p>{truncateText(item.body, 300)}</p>
+                </PublicationCardContent>
               </div>
-              <p>{truncateText(item.body, 300)}</p>
-            </PublicationCardContent>
-          </div>
-        ))
-      ) : (
-        <p>Loading</p>
-      )}
-    </PublicationCardContainer>
-    </CenteredPublicationCardContainer>
+            ))
+          ) : (
+            <p>Loading</p>
+          )}
+        </PublicationCardContainer>
+      </CenteredPublicationCardContainer>
+    </>
   );
 }
