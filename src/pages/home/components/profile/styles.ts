@@ -19,7 +19,7 @@ export const ProfileContent = styled.div`
 export const ImageContainer = styled.div`
   img {
     width: 9.25rem;
-    border-radius: 8px;
+    border-radius: 9999px;
   }
 `;
 
@@ -58,5 +58,6 @@ export const UrlContainer = styled.div`
     text-decoration: none;
     margin-top: 1.2rem;
     margin-left: 7rem;
+    font-weight: bold;
   }
 `

@@ -89,7 +89,7 @@ export function PublicationCard() {
                     <h1>{item.title}</h1>
                     <p>{calculateTimeAgo(item.created_at)}</p>
                   </div>
-                  <p>{truncateText(item.body, 300)}</p>
+                  <p>{truncateText(item.body, 200)}</p>
                 </PublicationCardContent>
               </div>
             ))

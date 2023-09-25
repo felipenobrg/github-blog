@@ -16,11 +16,11 @@ export const PublicationCardContainer = styled.div`
 export const PublicationCardContent = styled.div`
   background: ${(props) => props.theme["base-post"]};
   width: 25.9rem;
-  height: 19rem;
+  height: 16rem;
   padding: 2rem;
   border-radius: 8px;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   transition: border 0.3s ease;
 
   .name-time {
@@ -37,7 +37,7 @@ export const PublicationCardContent = styled.div`
   }
 
   &:hover {
-    border: 2.5px solid ${(props) => props.theme["base-border"]};
+    border: 3px solid ${(props) => props.theme["base-border"]};
   }
 
   p {
@@ -60,7 +60,7 @@ export const PublicationInputContainer = styled.div`
     padding: 1.2rem;
     border-radius: 8px;
     margin-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     &::placeholder {
       color: ${(props) => props.theme["base-label"]};

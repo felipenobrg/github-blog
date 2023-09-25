@@ -65,7 +65,7 @@ export function Profile() {
 
         <UrlContainer>
           <a href={profileData.html_url}>
-            GITHUB <ArrowSquareOut size={20} />
+            GITHUB <ArrowSquareOut size={20} weight="fill" />
           </a>
         </UrlContainer>
       </ProfileContent>
