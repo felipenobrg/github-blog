@@ -86,7 +86,7 @@ export const SpinnerWrapper = styled.div`
 
 export const Spinner = styled.div`
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #007bff;
+  border-top: 4px solid ${(props) => props.theme.blue};
   border-radius: 50%;
   width: 40px;
   height: 40px;
