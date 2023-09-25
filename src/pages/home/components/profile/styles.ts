@@ -12,6 +12,7 @@ export const ProfileContainer = styled.section`
 
   @media screen and (max-width: 768px) {
     height: 25rem;
+    max-width: 100%;
   }
 `;
 
@@ -35,9 +36,7 @@ export const ImageContainer = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
   }
 `;
 
@@ -78,7 +77,6 @@ export const ProfileAbout = styled.div`
     gap: 2px;
   }
 
-  
   @media screen and (max-width: 768px) {
    width: 60%;
   }
