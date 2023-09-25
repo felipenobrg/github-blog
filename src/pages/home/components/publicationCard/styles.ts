@@ -3,6 +3,10 @@ import styled, { keyframes } from "styled-components";
 export const CenteredPublicationCardContainer = styled.div`
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const PublicationCardContainer = styled.div`
@@ -11,6 +15,10 @@ export const PublicationCardContainer = styled.div`
   align-items: center;
   gap: 2rem;
   margin-top: 2rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const PublicationCardContent = styled.div`
@@ -42,6 +50,12 @@ export const PublicationCardContent = styled.div`
 
   p {
     color: ${(props) => props.theme["base-text"]};
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin: 0 auto;
+    height: 18rem;
   }
 `;
 

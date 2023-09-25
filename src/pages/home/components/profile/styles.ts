@@ -11,7 +11,7 @@ export const ProfileContainer = styled.section`
   border-radius: 8px;
 
   @media screen and (max-width: 768px) {
-    height: 25rem;
+    height: 27rem;
     max-width: 100%;
   }
 `;
@@ -20,13 +20,11 @@ export const ProfileContent = styled.div`
   margin: 2rem 0 0 2rem;
   display: flex;
 
-  
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     height: 120rem;
   }
- 
 `;
 
 export const ImageContainer = styled.div`
@@ -60,7 +58,7 @@ export const ProfileText = styled.div`
     h1 {
       margin-top: 1rem;
     }
-  
+
     p {
       width: 80%;
     }
@@ -78,10 +76,10 @@ export const ProfileAbout = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-   width: 60%;
+    width: 100%;
+    gap: 0;
   }
-  
-`
+`;
 
 export const UrlContainer = styled.div`
   a {
@@ -94,4 +92,10 @@ export const UrlContainer = styled.div`
     margin-left: 7rem;
     font-weight: bold;
   }
-`
+
+  @media screen and (max-width: 768px) {
+    a {
+      margin-left: 1rem;
+    }
+  }
+`;
