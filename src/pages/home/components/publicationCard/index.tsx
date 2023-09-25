@@ -16,7 +16,7 @@ export function PublicationCard() {
     async function getPublicationsData() {
       try {
         const response = await axios.get(
-          "https://api.github.com/search/issues?q=Boas%20práticas%20repo:rocketseat-education/reactjs-github-blog-challenge"
+          "https://api.github.com/search/issues?q=repo:felipenobrg/github-blog"
         );
 
         setPublicationsData(response.data.items);
