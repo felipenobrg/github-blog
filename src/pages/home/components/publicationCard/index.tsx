@@ -5,6 +5,8 @@ import {
   PublicationCardContainer,
   PublicationCardContent,
   PublicationInputContainer,
+  Spinner,
+  SpinnerWrapper,
 } from "./styles";
 
 interface PublicationItem {
@@ -39,8 +41,6 @@ export function PublicationCard() {
 
     getPublicationsData();
   }, []);
-
-  console.log(publicationData);
 
   const calculateTimeAgo = (dateString: string) => {
     const currentDate = new Date();
@@ -94,7 +94,9 @@ export function PublicationCard() {
               </div>
             ))
           ) : (
-            <p>Loading</p>
+            <SpinnerWrapper>
+              <Spinner />
+            </SpinnerWrapper>
           )}
         </PublicationCardContainer>
       </CenteredPublicationCardContainer>

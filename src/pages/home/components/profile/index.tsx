@@ -1,6 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { ImageContainer, ProfileAbout, ProfileContainer, ProfileContent, ProfileText, UrlContainer } from "./styles";
+import {
+  ImageContainer,
+  ProfileAbout,
+  ProfileContainer,
+  ProfileContent,
+  ProfileText,
+  UrlContainer,
+} from "./styles";
 import { ArrowSquareOut, GithubLogo, Users } from "phosphor-react";
 
 interface ProfileProps {
@@ -12,15 +19,15 @@ interface ProfileProps {
   html_url: string;
 }
 
-export function Profile() { 
+export function Profile() {
   const [profileData, setProfileData] = useState<ProfileProps>({
-  avatar_url: "",
-  name: "",
-  bio: "",
-  login: "",
-  followers: "",
-  html_url: "",
-});
+    avatar_url: "",
+    name: "",
+    bio: "",
+    login: "",
+    followers: "",
+    html_url: "",
+  });
 
   useEffect(() => {
     async function getProfileData() {
@@ -43,16 +50,23 @@ export function Profile() {
           <img src={profileData.avatar_url} alt="" />
         </ImageContainer>
         <ProfileText>
-        <h1>{profileData.name}</h1>
-        <p>{profileData.bio}</p>
-        <ProfileAbout>
-        <p><GithubLogo /> {profileData.login}</p>
-        <p><Users />{profileData.followers} seguidores</p>
-        </ProfileAbout>
+          <h1>{profileData.name}</h1>
+          <p>{profileData.bio}</p>
+          <ProfileAbout>
+            <p>
+              <GithubLogo /> {profileData.login}
+            </p>
+            <p>
+              <Users />
+              {profileData.followers} seguidores
+            </p>
+          </ProfileAbout>
         </ProfileText>
 
         <UrlContainer>
-          <a href={profileData.html_url}>GITHUB <ArrowSquareOut size={20} /></a>
+          <a href={profileData.html_url}>
+            GITHUB <ArrowSquareOut size={20} />
+          </a>
         </UrlContainer>
       </ProfileContent>
     </ProfileContainer>
