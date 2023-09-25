@@ -9,11 +9,24 @@ export const ProfileContainer = styled.section`
   margin: 0 auto;
   margin-top: -6rem;
   border-radius: 8px;
+
+  @media screen and (max-width: 768px) {
+    height: 25rem;
+  }
+
 `;
 
 export const ProfileContent = styled.div`
   margin: 2rem 0 0 2rem;
   display: flex;
+
+  
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 120rem;
+  }
+ 
 `;
 
 export const ImageContainer = styled.div`
