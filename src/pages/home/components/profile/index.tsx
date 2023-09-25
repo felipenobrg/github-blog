@@ -8,7 +8,6 @@ import {
   ProfileText,
   UrlContainer,
 } from "./styles";
-import { ArrowSquareOut, Users } from "phosphor-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
