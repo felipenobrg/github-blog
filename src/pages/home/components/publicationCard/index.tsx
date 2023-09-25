@@ -28,6 +28,8 @@ export function PublicationCard() {
     getPublicationsData();
   }, []);
 
+  console.log(publicationData)
+
   const calculateTimeAgo = (dateString: string) => {
     const currentDate = new Date();
     const createdAtDate = new Date(dateString);
@@ -52,6 +54,7 @@ export function PublicationCard() {
       return text.substring(0, maxLength) + "...";
     }
   };
+
 
   return (
     <CenteredPublicationCardContainer>

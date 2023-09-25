@@ -5,7 +5,6 @@ export const PublicationInputContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   background-color: ${(props) => props.theme["base-background"]};
   margin-top: 2rem;
 
@@ -21,6 +20,9 @@ export const PublicationInputContainer = styled.div`
       color: ${(props) => props.theme["base-label"]};
     }
 
-    
+    &:focus {
+      color: ${(props) => props.theme["blue"]};
+      outline: 2px solid ${(props) => props.theme["blue"]};
+    }
   }
 `;
