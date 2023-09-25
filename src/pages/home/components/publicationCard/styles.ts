@@ -60,6 +60,7 @@ export const PublicationInputContainer = styled.div`
     padding: 1.2rem;
     border-radius: 8px;
     margin-top: 1rem;
+    font-size: 1.1rem;
 
     &::placeholder {
       color: ${(props) => props.theme["base-label"]};
