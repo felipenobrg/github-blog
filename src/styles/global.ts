@@ -11,6 +11,20 @@ export const GlobalStyle = createGlobalStyle`
    outline: 0;
  }
 
+ ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: ${(props) => props.theme['blue']};
+  }
+
  body {
     color: ${(props) => props.theme['white']};
     -webkit-font-smoothing: antialiased;
