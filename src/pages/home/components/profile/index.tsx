@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { Spinner } from "../../../../components/spinner";
 
 interface ProfileProps {
   avatar_url: string;
@@ -23,14 +24,8 @@ interface ProfileProps {
 }
 
 export function Profile() {
-  const [profileData, setProfileData] = useState<ProfileProps>({
-    avatar_url: "",
-    name: "",
-    bio: "",
-    login: "",
-    followers: "",
-    html_url: "",
-  });
+  const [profileData, setProfileData] = useState<ProfileProps | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function getProfileData() {
@@ -39,8 +34,10 @@ export function Profile() {
           "https://api.github.com/users/felipenobrg"
         );
         setProfileData(response.data);
+        setIsLoading(false);
       } catch (error) {
         console.error(error);
+        setIsLoading(false);
       }
     }
     getProfileData();
@@ -48,30 +45,37 @@ export function Profile() {
 
   return (
     <ProfileContainer>
-      <ProfileContent>
-        <ImageContainer>
-          <img src={profileData.avatar_url} alt="" />
-        </ImageContainer>
-        <ProfileText>
-          <h1>{profileData.name}</h1>
-          <p>{profileData.bio}</p>
-          <ProfileAbout>
-            <p>
-            <FontAwesomeIcon icon={faGithub} /> {profileData.login}
-            </p>
-            <p>
-            <FontAwesomeIcon icon={faUser} />
-              {profileData.followers} seguidores
-            </p>
-          </ProfileAbout>
-        </ProfileText>
-
-        <UrlContainer>
-          <a href={profileData.html_url}>
-            GITHUB <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </a>
-        </UrlContainer>
-      </ProfileContent>
+      {isLoading ? (
+        <Spinner />
+      ) : profileData ? (
+        <ProfileContent>
+          <>
+            <ImageContainer>
+              <img src={profileData.avatar_url} alt="" />
+            </ImageContainer>
+            <ProfileText>
+              <h1>{profileData.name}</h1>
+              <p>{profileData.bio}</p>
+              <ProfileAbout>
+                <p>
+                  <FontAwesomeIcon icon={faGithub} /> {profileData.login}
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faUser} />
+                  {profileData.followers} seguidores
+                </p>
+              </ProfileAbout>
+            </ProfileText>
+            <UrlContainer>
+              <a href={profileData.html_url}>
+                GITHUB <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </a>
+            </UrlContainer>
+          </>
+        </ProfileContent>
+      ) : (
+        <p>No profile data available.</p>
+      )}
     </ProfileContainer>
   );
 }

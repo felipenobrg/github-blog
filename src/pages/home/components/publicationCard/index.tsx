@@ -5,9 +5,9 @@ import {
   PublicationCardContainer,
   PublicationCardContent,
   PublicationInputContainer,
-  Spinner,
-  SpinnerWrapper,
 } from "./styles";
+import { Link } from "react-router-dom";
+import { Spinner } from "../../../../components/spinner";
 
 interface PublicationItem {
   id: number;
@@ -84,6 +84,7 @@ export function PublicationCard() {
           {filteredPublicationData.length > 0 ? (
             filteredPublicationData.map((item) => (
               <div key={item.id}>
+                <Link to={`/publication/${item.id}`}>
                 <PublicationCardContent>
                   <div className="name-time">
                     <h1>{item.title}</h1>
@@ -91,12 +92,11 @@ export function PublicationCard() {
                   </div>
                   <p>{truncateText(item.body, 200)}</p>
                 </PublicationCardContent>
+                </Link>
               </div>
             ))
           ) : (
-            <SpinnerWrapper>
               <Spinner />
-            </SpinnerWrapper>
           )}
         </PublicationCardContainer>
       </CenteredPublicationCardContainer>
