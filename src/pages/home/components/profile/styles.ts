@@ -15,6 +15,7 @@ export const ProfileContainer = styled.section`
   @media screen and (max-width: 768px) {
     height: 27rem;
     max-width: 100%;
+    align-items: flex-start;
   }
 `;
 
