@@ -46,7 +46,9 @@ export function Profile() {
   return (
     <ProfileContainer>
       {isLoading ? (
-        <Spinner />
+        <div>
+          <Spinner />
+        </div>
       ) : profileData ? (
         <ProfileContent>
           <>
@@ -74,7 +76,7 @@ export function Profile() {
           </>
         </ProfileContent>
       ) : (
-        <p>No profile data available.</p>
+        <p>Sem dados do perfil disponível.</p>
       )}
     </ProfileContainer>
   );

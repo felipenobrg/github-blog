@@ -6,6 +6,8 @@ export const ProfileContainer = styled.section`
   height: 13.25rem;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   margin-top: -6rem;
   border-radius: 8px;
