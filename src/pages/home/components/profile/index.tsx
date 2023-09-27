@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import {
   ImageContainer,
@@ -13,6 +12,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { Spinner } from "../../../../components/spinner";
+import { api } from "../../../../lib/axios";
 
 interface ProfileProps {
   avatar_url: string;
@@ -30,8 +30,8 @@ export function Profile() {
   useEffect(() => {
     async function getProfileData() {
       try {
-        const response = await axios.get(
-          "https://api.github.com/users/felipenobrg"
+        const response = await api.get(
+          `/users/felipenobrg`
         );
         setProfileData(response.data);
         setIsLoading(false);

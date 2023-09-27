@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import {
   CenteredPublicationCardContainer,
@@ -8,6 +7,7 @@ import {
 } from "./styles";
 import { Link } from "react-router-dom";
 import { Spinner } from "../../../../components/spinner";
+import { api } from "../../../../lib/axios";
 
 interface PublicationItem {
   id: number;
@@ -29,8 +29,8 @@ export function PublicationCard() {
   useEffect(() => {
     async function getPublicationsData() {
       try {
-        const response = await axios.get(
-          "https://api.github.com/search/issues?q=repo:felipenobrg/github-blog"
+        const response = await api.get(
+          `/search/issues?q=repo:felipenobrg/github-blog`
         );
 
         setPublicationsData(response.data.items);
