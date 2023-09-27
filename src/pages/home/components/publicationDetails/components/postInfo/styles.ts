@@ -61,6 +61,6 @@ export const ProfileInfoAbout = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    gap: 0;
+    gap: 6px;
   }
 `;
