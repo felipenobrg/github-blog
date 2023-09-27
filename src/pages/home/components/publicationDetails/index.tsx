@@ -1,10 +1,11 @@
-import { Header } from "../../../../components/header"
+import { Header } from "../../../../components/header";
+import { PostInfo } from "./components/postInfo";
 
 export function PublicationDetails() {
-    return (
-        <>
-        <Header />
-        <h1>oiiiiiiiiiii</h1>
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <PostInfo />
+    </>
+  );
 }
