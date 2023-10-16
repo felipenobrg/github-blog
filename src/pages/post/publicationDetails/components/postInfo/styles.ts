@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProfileInfoContainer = styled.div`
   background: ${(props) => props.theme["base-profile"]};
   width: 54rem;
-  height: 13.25rem;
+  height: 10.5rem;
 
   display: flex;
   justify-content: center;
@@ -12,10 +12,10 @@ export const ProfileInfoContainer = styled.div`
   border-radius: 8px;
 
   @media screen and (max-width: 768px) {
-    height: 27rem;
+    height: 16rem;
     max-width: 100%;
     align-items: flex-start;
-    height: 18rem;
+    margin-bottom: 2rem;
   }
 `
 
@@ -24,12 +24,6 @@ export const ProfileInfoContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    height: 120rem;
-  }
 `
 
 export const ProfileInfoButtons = styled.div`
@@ -47,6 +41,10 @@ export const ProfileInfoButtons = styled.div`
 
 export const ProfileInfoTitle = styled.div`
   margin-top: 1rem;
+
+  h1 {
+    font-size: 24px;
+  }
 `
 export const ProfileInfoAbout = styled.div`
   display: flex;
@@ -62,6 +60,7 @@ export const ProfileInfoAbout = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    gap: 6px;
+    gap: 8px;
+    flex-direction: column;
   }
 `;
