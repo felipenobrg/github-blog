@@ -6,17 +6,23 @@ export const PostContentContainer = styled.section`
   gap: 2rem;
   padding: 2.5rem 2rem;
   margin-bottom: 8rem;
-  width: 80%;
+  width: 54rem;
   margin: 0 auto;
 
   img {
     width: 100%;
+    margin: 1rem 0 1rem 0;
   }
 
   h1,
   h2,
   h3 {
-    color: ${(props => props.theme.blue)};
+    color: ${(props) => props.theme.blue};
+    margin: 1rem 0 1rem 0;
+  }
+
+  a {
+    color: ${(props) => props.theme.blue};
   }
 
   ul {
@@ -25,7 +31,7 @@ export const PostContentContainer = styled.section`
   }
 
   pre {
-    background:  ${(props => props.theme["base-post"])};
+    background: ${(props) => props.theme["base-post"]};
     padding: 1rem;
 
     > div {

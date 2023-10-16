@@ -12,7 +12,7 @@ export const ProfileInfoContainer = styled.div`
   border-radius: 8px;
 
   @media screen and (max-width: 768px) {
-    height: 16rem;
+    height: 19rem;
     max-width: 100%;
     align-items: flex-start;
     margin-bottom: 2rem;
@@ -45,6 +45,8 @@ export const ProfileInfoTitle = styled.div`
   h1 {
     font-size: 24px;
   }
+
+  
 `
 export const ProfileInfoAbout = styled.div`
   display: flex;

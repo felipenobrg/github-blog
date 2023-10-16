@@ -8,7 +8,6 @@ import { PostContent } from "./publicationDetails/components/postContent";
 import { Spinner } from "../../components/spinner";
 import { SpinnerContainer } from "./styles";
 
-
 export function PublicationDetails() {
   const [postData, setPostData] = useState<ProfileProps>({} as ProfileProps);
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +38,7 @@ export function PublicationDetails() {
       <Header />
       {isLoading ? (
         <SpinnerContainer>
-        <Spinner />
+          <Spinner />
         </SpinnerContainer>
       ) : postData ? (
         <>

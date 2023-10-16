@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CenteredPublicationCardContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 8rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;

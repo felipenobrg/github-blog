@@ -93,7 +93,7 @@ export const UrlContainer = styled.div`
     color: ${(props) => props.theme["blue"]};
     text-decoration: none;
     margin-top: 1.2rem;
-    margin-left: 7rem;
+    margin-left: 6rem;
     font-weight: bold;
   }
 
