@@ -25,6 +25,7 @@ export interface ProfileProps {
   user: string;
   created_at: string;
   comments: string;
+  body: string;
 }
 
 export function Profile() {

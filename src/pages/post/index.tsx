@@ -10,7 +10,7 @@ import { PostContent } from "./publicationDetails/components/postContent";
 export function PublicationDetails() {
   const [postData, setPostData] = useState<ProfileProps>({} as ProfileProps);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const { id } = useParams();
 
   const getPostDetails = useCallback(async () => {
@@ -40,7 +40,7 @@ export function PublicationDetails() {
       ) : postData ? (
         <>
           <PostInfo postData={postData} />
-          <PostContent postData={postData} />
+          <PostContent content={postData.body} />
         </>
       ) : (
         <p>Página não encontrada</p>
