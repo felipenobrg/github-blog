@@ -22,10 +22,12 @@ export interface ProfileProps {
   followers: string;
   html_url: string;
   title: string;
-  user: string;
   created_at: string;
   comments: string;
   body: string;
+  user: {
+    login: string;
+  }
 }
 
 export function Profile() {

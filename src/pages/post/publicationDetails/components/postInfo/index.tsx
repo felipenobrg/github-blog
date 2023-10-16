@@ -29,6 +29,7 @@ export function PostInfo({ postData }: PostInfoProps) {
   const formattedDate = `${day}/${month}/${year}`;
   
   return (
+  
     <ProfileInfoContainer>
       <ProfileInfoContent>
         <ProfileInfoButtons>
@@ -45,7 +46,7 @@ export function PostInfo({ postData }: PostInfoProps) {
         <ProfileInfoAbout>
           <p>
             <FontAwesomeIcon icon={faGithub} />
-            {postData.login}
+            {postData.user.login}
           </p>
           <p>
             <FontAwesomeIcon icon={faCalendarDay} />
