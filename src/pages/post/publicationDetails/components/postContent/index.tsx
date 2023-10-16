@@ -17,7 +17,11 @@ export function PostContent({ content }: PostContentProps) {
             const match = /language-(\w+)/.exec(className || "");
             return match ? (
               <Prism language={match[1]} style={dracula}>
-                {children}: any
+                {children
+                  ? Array.isArray(children)
+                    ? children.join("")
+                    : children.toString()
+                  : ""}
               </Prism>
             ) : (
               <code className={className}>{children}</code>
