@@ -14,13 +14,17 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { Spinner } from "../../../../components/spinner";
 import { api } from "../../../../lib/axios";
 
-interface ProfileProps {
+export interface ProfileProps {
   avatar_url: string;
   name: string;
   bio: string;
   login: string;
   followers: string;
   html_url: string;
+  title: string;
+  user: string;
+  created_at: string;
+  comments: string;
 }
 
 export function Profile() {

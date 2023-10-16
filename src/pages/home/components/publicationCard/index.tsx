@@ -14,6 +14,7 @@ interface PublicationItem {
   title: string;
   body: string;
   created_at: string;
+  number: number;
 }
 
 export function PublicationCard() {
@@ -25,12 +26,11 @@ export function PublicationCard() {
   const filteredPublicationData = publicationData.filter((item) =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
   useEffect(() => {
     async function getPublicationsData() {
       try {
         const response = await api.get(
-          `/search/issues?q=repo:felipenobrg/github-blog`
+          `/search/issues?q=repo:felipenobrg/github-blog/`
         );
 
         setPublicationsData(response.data.items);
@@ -56,6 +56,10 @@ export function PublicationCard() {
           (1000 * 60 * 60 * 24)
       );
       return `${daysAgo} dias`;
+    }
+
+    if (monthsAgo === 1) {
+      return ` ${monthsAgo} mês`;
     }
 
     return `${monthsAgo} meses`;
@@ -84,19 +88,19 @@ export function PublicationCard() {
           {filteredPublicationData.length > 0 ? (
             filteredPublicationData.map((item) => (
               <div key={item.id}>
-                <Link to={`/publication/${item.id}`}>
-                <PublicationCardContent>
-                  <div className="name-time">
-                    <h1>{item.title}</h1>
-                    <p>{calculateTimeAgo(item.created_at)}</p>
-                  </div>
-                  <p>{truncateText(item.body, 200)}</p>
-                </PublicationCardContent>
+                <Link to={`/publication/${item.number}`}>
+                  <PublicationCardContent>
+                    <div className="name-time">
+                      <h1>{item.title}</h1>
+                      <p>{calculateTimeAgo(item.created_at)}</p>
+                    </div>
+                    <p>{truncateText(item.body, 200)}</p>
+                  </PublicationCardContent>
                 </Link>
               </div>
             ))
           ) : (
-              <Spinner />
+            <Spinner />
           )}
         </PublicationCardContainer>
       </CenteredPublicationCardContainer>

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "../pages/home";
-import { PublicationDetails } from "../pages/home/components/publicationDetails";
+import { PublicationDetails } from "../pages/post";
 
 export function Router() {
     return (
