@@ -5,6 +5,8 @@ import { api } from "../../lib/axios";
 import { PostInfo } from "./publicationDetails/components/postInfo";
 import { ProfileProps } from "../home/components/profile";
 import { PostContent } from "./publicationDetails/components/postContent";
+import { Spinner } from "../../components/spinner";
+import { SpinnerContainer } from "./styles";
 
 
 export function PublicationDetails() {
@@ -36,7 +38,9 @@ export function PublicationDetails() {
     <>
       <Header />
       {isLoading ? (
-        <p>Loading...</p>
+        <SpinnerContainer>
+        <Spinner />
+        </SpinnerContainer>
       ) : postData ? (
         <>
           <PostInfo postData={postData} />

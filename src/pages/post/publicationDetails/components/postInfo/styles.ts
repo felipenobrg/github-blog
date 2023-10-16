@@ -15,6 +15,7 @@ export const ProfileInfoContainer = styled.div`
     height: 27rem;
     max-width: 100%;
     align-items: flex-start;
+    height: 18rem;
   }
 `
 

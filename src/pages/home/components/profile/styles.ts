@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ProfileContainer = styled.section`
   background: ${(props) => props.theme["base-profile"]};
   width: 54rem;
+  max-width: 100%;
   height: 13.25rem;
 
   display: flex;
@@ -14,7 +15,6 @@ export const ProfileContainer = styled.section`
 
   @media screen and (max-width: 768px) {
     height: 27rem;
-    max-width: 100%;
     align-items: flex-start;
   }
 `;
@@ -34,6 +34,7 @@ export const ImageContainer = styled.div`
   img {
     width: 9.25rem;
     border-radius: 9999px;
+    margin-right: 2rem;
   }
 
   @media screen and (max-width: 768px) {

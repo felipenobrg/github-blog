@@ -5,6 +5,8 @@ export const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'FiraCode';
   src: url(${FiraCode});
+  font-weight: 400;
+  font-style: normal;
 }
  * {
     margin: 0;
