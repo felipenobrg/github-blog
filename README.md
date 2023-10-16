@@ -1,5 +1,5 @@
-<h1 align="center">Almeida Fest</h1>
-<p align="center">Almeida Fest is blog made using Github Api.
+<h1 align="center">Github Blog</h1>
+<p align="center">Github Blog is a blog made using Github Api.
 <p align="center">
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-tecnologias"> Features </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
