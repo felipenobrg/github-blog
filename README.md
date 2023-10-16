@@ -1,27 +1,45 @@
-# React + TypeScript + Vite
+<h1 align="center">Almeida Fest</h1>
+<p align="center">Almeida Fest is blog made using Github Api.
+<p align="center">
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-tecnologias"> Features </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-tecnologias"> Technologies </a>&nbsp;&nbsp;&nbsp;|&nbsp;
+    <a href="#-layout">Layout</a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔖 Layout
 
-Currently, two official plugins are available:
+<p align="center">
+<img src="https://github.com/felipenobrg/github-blog/assets/122055576/3b1605c5-f9ad-4345-8e25-3a91c73a390b"/>
+</p>
+  
+## 🚀 Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was developed using the following technologies:
 
-## Expanding the ESLint configuration
+- ReactJS
+- TypeScript
+- Styled-Components
+- Axios
+- React-Router-Dom
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Layout
 
-- Configure the top-level `parserOptions` property like this:
+<p>Desktop: </p>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+<p align="center">
+<img src="https://github.com/felipenobrg/github-blog/assets/122055576/5715f355-54e6-4c2c-909e-98c6e5c3475c">
+</p>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<br />
+
+<p>Mobile: </p>
+<img src="https://github.com/felipenobrg/github-blog/assets/122055576/3b1605c5-f9ad-4345-8e25-3a91c73a390b"/>
+
+<p align="center">
+
+</p>
+
+---
+
+[My profile in Linkedln](https://www.linkedin.com/in/felipenobrg)
