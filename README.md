@@ -9,7 +9,7 @@
 ## 🔖 Layout
 
 <p align="center">
-<img src="https://github.com/felipenobrg/github-blog/assets/122055576/3b1605c5-f9ad-4345-8e25-3a91c73a390b"/>
+<img src="https://github.com/felipenobrg/github-blog/assets/122055576/380ffa9e-bdf7-465b-bc69-5c46facbb224" />
 </p>
   
 ## 🚀 Technologies
